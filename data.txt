@@ -1,0 +1,11 @@
+use site;
+create table info(id INT(4) PRIMARY KEY AUTO_INCREMENT,
+board VARCHAR(255),
+name VARCHAR(255),
+protagonist VARCHAR(255),
+city VARCHAR(255),
+langueage VARCHAR(255),
+grade TINYINT,
+imgurl VARCHAR(255) default NULL,
+url VARCHAR(255) default NULL
+);
