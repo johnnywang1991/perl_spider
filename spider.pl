@@ -96,17 +96,16 @@ sub gain_info {
                 my $city = shift @all_infos;
                 my $language = shift @all_infos;
                 my $grade = $all_infos[1];
-                ### $board_info
-                ### $name
-                ### $protagonist
-                ### $city
-                ### $language
-                ### $grade
-                ### $imgurl
-                ### $url;
+                # $board_info
+                # $name
+                # $protagonist
+                # $city
+                # $language
+                # $grade
+                # $imgurl
+                # $url;
                 my $rows = $dbh->do(
-                    "INSERT INTO info VALUES ('',$board_info,$name,$protagonist,$city,$language,$grade,$imgurl,$url)"
-                    # "INSERT INTO info VALUES ('','board_info','name','protagonist','city','language','grade','imgurl','url')"
+                    qq/INSERT INTO info VALUES ('',"$board_info","$name","$protagonist","$city","$language","$grade","$imgurl","$url")/
                 );
                 say "$rows row(s) affected";
             }
